@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Pokemon (props){
+const Pokemon = (props) =>{
     return(
         <li className="Pokemon__container">
             <div className="Pokemon_photo">
-                <img className="photo" src={props.pokeImage}/>
+                <img className="photo" src={props.pokeImage} alt={props.pokeName}/>
             </div>
             <div className="Pokemon_name">
                 <h2>{props.pokeName}</h2>
