@@ -1,51 +1,70 @@
 html{
-  background-color: lightgreen;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 .App {
-  .general__Title{
-    text-align: center;
-    top:20px;
-    color:#ff7b73;
-    font-size: 36px;
-    letter-spacing: 5px;
-    border: 2px solid black;
-    display:inline-block;
-    width:300px;
-    position:absolute;
-  }
     
     .PokeList__container{
       margin-top:100px;
-      background-color: lightgreen;
+      background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);;
       text-align: center;
       list-style-type: none;
       display:flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
       .Pokemon__container{
-        background-color: white;
-        width:250px;
-        height:350px;
+        background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+        width:275px;
+        height:400px;
         margin:40px;
         display:flex;
         flex-direction: column;
         align-items: center;
         justify-content:center;
+        border:8px solid goldenrod;
+        border-radius: 10px;
           .photo{
             width:200px;
             height:200px;
+            border:8px solid goldenrod;
+            background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
           }
           .Pokemon_name{
-            border-top: 2px solid black;
-            border-bottom: 2px solid black;
-            width:250px;
-            background-color: lightgray;
-            color:black;
+            text-align: left;
+            margin-right:120px;
+            font-size:12px;
           }
           .Pokemon_types{
-            color: lightgreen;
-            font-weight: 700;
-
+            color: black;
+            font-weight: 400;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+              .circle{
+                width:20px;
+                height:20px;
+                background-color: red;
+                border-radius: 100%;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                .fas{
+                  color:black;
+                }
+              }
+              .myTwoTypes{
+                margin:8px;
+              }
+              .type1{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+              .type2{
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+              }
           }
     }
     }
