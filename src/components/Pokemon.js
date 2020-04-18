@@ -14,7 +14,7 @@ const Pokemon = (props) =>{
             <div className="Pokemon_types">
                 {props.pokeTypes.map((myType, index) =>
                 <div className="general">
-                 <div className="circle"><i className={`fas ${myType=== "fire" ? "fa-fire-alt" : myType=== "water" ? "fa-tint" : myType === "grass" ? "fa-leaf" : "fa-bug"}`}></i>
+                 <div className="circle"><i className={`fas ${myType=== "fire" ? "fa-fire-alt" : myType=== "water" ? "fa-tint" : myType === "grass" ? "fa-leaf" : myType==="bug" ? "fa-bug" : myType==="flying" ? "fa-dove" : "fa-skull-crossbones"}`}></i>
                  </div>
                 <p key={index} className="myTwoTypes">
                     {myType}
@@ -23,10 +23,6 @@ const Pokemon = (props) =>{
                 </div>
                 )} 
             </div>
-            {/*
-            flying <i class="fas fa-dove"></i>
-            poison <i class="fas fa-skull-crossbones"></i>
-             */}
         </li>
     )
 }
