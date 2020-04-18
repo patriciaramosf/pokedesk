@@ -1,11 +1,12 @@
 import React from 'react';
-
+import logo from '../pokemon.png';
 const Pokemon = (props) =>{
+    const numberSum = Math.round(Math.random()*60);
     return(
         <li className="Pokemon__container">
              <div className="Pokemon_name">
                 <h2>{props.pokeName}</h2>
-                <div className="magic"><i class="fas fa-magic"></i></div>
+                <div className="magic"><img className="pokeball" src={logo}/></div>
             </div>
             <div className="Pokemon_photo">
                 <img className="photo" src={props.pokeImage} alt={props.pokeName}/>
@@ -18,7 +19,7 @@ const Pokemon = (props) =>{
                 <p key={index} className="myTwoTypes">
                     {myType}
                 </p>
-                <p className="number">8</p>
+                <p className="number">{numberSum}</p>
                 </div>
                 )} 
             </div>
