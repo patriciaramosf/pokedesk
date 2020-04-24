@@ -1,11 +1,39 @@
 html{
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
+li{
+  list-style-type: none;
+}
 .App {
+    .Header{
+      margin-top:20px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+        .title{
+          font-family: 'VT323', monospace;
+          text-transform: uppercase;
+          font-size: 80px;
+          color:#ff3251;
+        }
+        .containerPokemonLogo{
+          width:80px;
+          height:80px;
+          background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+          border-radius: 100%;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 2px 3px 2px 2px rgba(50, 50, 50, 0.26);
+            .pokemonLogo{
+              width:60px;
+            }
+        }
+    }
     
     .PokeList__container{
       font-family: 'VT323', monospace;
-      margin-top:100px;
+      margin-top:30px;
       background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);;
       text-align: center;
       list-style-type: none;
