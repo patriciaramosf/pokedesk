@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../pokemon.png';
+import logo from '../pokeball.png';
 const Pokemon = (props) =>{
     const numberSum = Math.round(Math.random()*60);
     return(

@@ -1,3 +1,4 @@
+@import './base/mixins.scss';
 html{
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
@@ -13,20 +14,15 @@ li{
         .title{
           font-family: 'VT323', monospace;
           text-transform: uppercase;
-          font-size: 80px;
-          color:#ff3251;
+          font-size: 8px;
+          display:none;
         }
         .containerPokemonLogo{
-          width:80px;
-          height:80px;
-          background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-          border-radius: 100%;
-          display:flex;
-          justify-content: center;
-          align-items: center;
-          box-shadow: 2px 3px 2px 2px rgba(50, 50, 50, 0.26);
             .pokemonLogo{
-              width:60px;
+              width:300px;
+              @include forTablet{
+                width:500px;
+              }
             }
         }
     }
@@ -37,9 +33,19 @@ li{
       background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);;
       text-align: center;
       list-style-type: none;
-      display:flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
+      display:grid;
+      grid-column:1;
+      grid-gap:30px;
+      justify-content: center;
+        @include forTablet{
+          grid-template-columns: 1fr 1fr;
+          grid-row-gap:25px;
+        }
+        @include forDesktop{
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-row-gap:15px;
+        }
+
       .Pokemon__container{
         background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
         width:275px;
@@ -125,4 +131,3 @@ li{
     }
     }
 }
-
