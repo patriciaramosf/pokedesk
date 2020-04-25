@@ -14,17 +14,17 @@ const Pokemon = (props) =>{
                 <img className="photo" src={props.pokeImage} alt={props.pokeName}/>
             </div>
             <div className="Pokemon_types">
-                {props.pokeTypes.map((myType) =>
-                    <div className="general">
+                {props.pokeTypes.map((myType,index) =>
+                    <div key={index} className="general">
                         <div className="circle">
                             <i className={`fas ${myType=== "fire" ? "fa-fire-alt" : myType=== "water" ? "fa-tint" : myType === "grass" ? "fa-leaf" : myType==="bug" ? "fa-bug" : myType==="flying" ? "fa-dove" : "fa-skull-crossbones"}`}
                             />
-                            </div>
-                    <ul className="myTwoTypes">
-                        <li>{myType}</li>
-                    </ul>
-                <p className="number">{numberSum}</p>
-                </div>
+                        </div>
+                        <ul className="myTwoTypes">
+                            <li key={index}>{myType}</li>
+                        </ul>
+                        <p className="number">{numberSum}</p>
+                    </div>
                 )} 
             </div>
         </div>

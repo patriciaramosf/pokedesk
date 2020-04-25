@@ -6,18 +6,15 @@ const PokeList = (props) => {
     
     return(
         <ul className="PokeList__container">
-            {props.dataList.map((myPokemon)=>
+            {props.dataList.map(myPokemon=>
                 <li key={myPokemon.id}>
-                    <Pokemon   pokeImage={myPokemon.url}
+                    <Pokemon    key={myPokemon.id}  
+                                pokeImage={myPokemon.url}
                                 pokeName={myPokemon.name}
                                 pokeTypes={myPokemon.types}
-                                key={myPokemon.id}
                     /> 
                 </li>
-            )}
-        
-
-           
+            )}         
         </ul>
     )
 }
