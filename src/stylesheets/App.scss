@@ -131,3 +131,21 @@ li{
     }
     }
 }
+
+.getFavourite{
+  background-color: goldenrod;
+  border: none;
+  border-radius: 20px;
+  width:100px;
+  height:25px;
+  position:absolute;
+  top:-18px;
+  color:black;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  font-weight: bold;
+    &:hover{
+      background-color: black;
+      color:goldenrod;
+    }
+}

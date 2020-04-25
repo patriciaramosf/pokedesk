@@ -12,6 +12,8 @@ const PokeList = (props) => {
                                 pokeImage={myPokemon.url}
                                 pokeName={myPokemon.name}
                                 pokeTypes={myPokemon.types}
+                                favourites={props.favourites}
+                                getFav={props.getFav}
                     /> 
                 </li>
             )}         

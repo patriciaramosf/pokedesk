@@ -2,8 +2,13 @@ import React from 'react';
 import logo from '../pokeball.png';
 const Pokemon = (props) =>{
     const numberSum = Math.round(Math.random()*60);
+    const getFav=(event)=>props.getFav(<Pokemon/>)
+    /* const getFav=(event)>props.getFavr(event.currentTarget.parentElement) */
     return(
         <div className="Pokemon__container">
+            <button onClick={getFav}className="getFavourite">
+                GET IT
+            </button>
              <div className="Pokemon_name">
                 <h2>{props.pokeName}</h2>
                 <div className="magic">
