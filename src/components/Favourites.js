@@ -1,15 +1,19 @@
-import React from 'react';
+import React from 'react'
+import Pokemon from './Pokemon'
 
 const Favourites = (props) => {
-    return(
-        <ul className="Favourites">
-       {props.favourites.map((fav, index=>
-        <li key={index}>{fav}</li>
-
+  return (
+    <>
+      <h2 className="text-center">Favourites</h2>
+      <ul className="Favourites">
+        {props.favourites.map((fav, index) => (
+          <li key={index}>
+            <Pokemon {...fav} />
+          </li>
         ))}
-
-        </ul>
-    )
+      </ul>
+    </>
+  )
 }
 
-export default Favourites;
+export default Favourites
