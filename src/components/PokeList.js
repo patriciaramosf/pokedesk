@@ -14,6 +14,7 @@ const PokeList = (props) => {
                                 pokeTypes={myPokemon.types}
                                 favourites={props.favourites}
                                 getFav={props.getFav}
+                                id={myPokemon.id}
                     /> 
                 </li>
             )}         

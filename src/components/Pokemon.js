@@ -3,9 +3,9 @@ import logo from '../pokeball.png';
 const Pokemon = (props) =>{
     const numberSum = Math.round(Math.random()*60);
     /* const getFav=(event)=>props.getFav(<Pokemon/>) */
-    const getMyFav=(event)=>props.getFav(event.currentTarget.parentElement)
+    const getMyFav=()=>props.getFav(props.pokemon)
     return(
-        <div className="Pokemon__container">
+        <div id={props.id} className="Pokemon__container">
             <button onClick={getMyFav} className="getFavourite">
                 GET IT
             </button>
