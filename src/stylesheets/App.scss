@@ -1,151 +1,155 @@
-@import './base/mixins.scss';
-html{
+@import "./base/mixins.scss";
+html {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
-li{
+li {
   list-style-type: none;
 }
 .App {
-    .Header{
-      margin-top:20px;
-      display:flex;
-      justify-content: center;
-      align-items: center;
-        .title{
-          font-family: 'VT323', monospace;
-          text-transform: uppercase;
-          font-size: 8px;
-          display:none;
-        }
-        .containerPokemonLogo{
-            .pokemonLogo{
-              width:300px;
-              @include forTablet{
-                width:400px;
-              }
-            }
-        }
+  .Header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title {
+      font-family: "VT323", monospace;
+      text-transform: uppercase;
+      font-size: 8px;
+      display: none;
     }
-    
-    .PokeList__container{
-      font-family: 'VT323', monospace;
-      margin-top:30px;
-      background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);;
-      text-align: center;
-      list-style-type: none;
-      display:grid;
-      grid-column:1;
-      grid-gap:30px;
-      justify-content: center;
-        @include forTablet{
-          grid-template-columns: 1fr 1fr;
-          grid-row-gap:25px;
+    .containerPokemonLogo {
+      .pokemonLogo {
+        width: 300px;
+        @include forTablet {
+          width: 400px;
         }
-        @include forDesktop{
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-row-gap:15px;
-        }
+      }
+    }
+  }
 
-      .Pokemon__container{
-        background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-        width:275px;
-        height:400px;
-        margin:40px;
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:center;
-        border:8px solid goldenrod;
-        border-radius: 10px;
-        position: relative;
-        box-shadow: 6px 12px 12px 6px rgba(50, 50, 50, 0.26);
-          .photo{
-            width:200px;
-            height:200px;
-            border:8px solid goldenrod;
-            background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-          }
-          .Pokemon_name{
-            text-align: left;
-            margin-right:120px;
-            font-size:16px;
-            display:flex;
-            text-transform: uppercase;
-            
-            .magic{
-              width:25px;
-              height:25px;
-              background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
-              border-radius: 100%;
-              display:flex;
-              align-items: center;
-              justify-content: center;
-              position:absolute;
-              right:10px;
-              top:10px;
-                .pokeball{
-                  width:15px;
-                }
-            }
-          }
-          .Pokemon_types{
-            color: black;
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-              .myTwoTypes{
-                display:flex;
-                flex-direction: column;
-                width:100%;
-                font-size: 20px;
-              }
-              .general{
-                display:flex;
-                justify-content: space-between;
-                align-items: center;
-                width:100%;
-                text-align: center;
-                .number{
-                  font-weight: 600px;
-                  font-size: 20px;
-                  color:black;
-                  margin-left:20px;
-                }
-                .circle{
-                  width:20px;
-                  height:20px;
-                  background-color: red;
-                  border-radius: 100%;
-                  display:flex;
-                  align-items: center;
-                  justify-content: center;
-                  margin-right:20px;
-                  .fas{
-                    color:black;
-                  }
-                }
-              }
-          }
+  .PokeList__container {
+    font-family: "VT323", monospace;
+    margin-top: 30px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    text-align: center;
+    list-style-type: none;
+    display: grid;
+    grid-column: 1;
+    grid-gap: 30px;
+    justify-content: center;
+    @include forTablet {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 25px;
     }
+    @include forDesktop {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 15px;
     }
+  }
 }
 
-.getFavourite{
+.Pokemon__container {
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  width: 275px;
+  height: 400px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid goldenrod;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 6px 12px 12px 6px rgba(50, 50, 50, 0.26);
+  .photo {
+    width: 200px;
+    height: 200px;
+    border: 8px solid goldenrod;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  }
+  .Pokemon_name {
+    text-align: left;
+    margin-right: 120px;
+    font-size: 16px;
+    display: flex;
+    text-transform: uppercase;
+
+    .magic {
+      width: 25px;
+      height: 25px;
+      background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      .pokeball {
+        width: 15px;
+      }
+    }
+  }
+  .Pokemon_types {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .myTwoTypes {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-size: 20px;
+    }
+    .general {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      .number {
+        font-weight: 600px;
+        font-size: 20px;
+        color: black;
+        margin-left: 20px;
+      }
+      .circle {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        .fas {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.getFavourite {
   background-color: goldenrod;
   border: none;
   border-radius: 20px;
-  width:100px;
-  height:25px;
-  position:absolute;
-  top:-18px;
-  color:black;
-  font-family: 'VT323', monospace;
+  width: 100px;
+  height: 25px;
+  position: absolute;
+  top: -18px;
+  color: black;
+  font-family: "VT323", monospace;
   font-size: 20px;
   font-weight: bold;
-    &:hover{
-      background-color: black;
-      color:goldenrod;
-    }
+  &:hover {
+    background-color: black;
+    color: goldenrod;
+  }
+}
+
+.text-center {
+  text-align: center;
 }
