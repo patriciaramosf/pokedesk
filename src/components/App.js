@@ -16,9 +16,9 @@ class App extends React.Component {
     }
   }
   getFav(myFav){
-    this.setState(prevState => ({
-      favourites: prevState.favourites + myFav
-    }));
+    this.setState((prevState) => ({
+      favourites: [...prevState.favourites, myFav],
+    }))
   }
 
   render() {
