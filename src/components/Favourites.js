@@ -4,14 +4,15 @@ import Pokemon from './Pokemon'
 const Favourites = (props) => {
   return (
     <>
-      <h2 className="text-center">Favourites</h2>
+    <div className="favContainer">
       <ul className="Favourites">
         {props.favourites.map((fav, index) => (
-          <li key={index}>
+          <li className="liFav" key={index}>
             <Pokemon {...fav} />
           </li>
         ))}
       </ul>
+      </div>
     </>
   )
 }

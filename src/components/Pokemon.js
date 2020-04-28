@@ -2,15 +2,12 @@ import React from 'react'
 import logo from '../pokeball.png'
 
 const Pokemon = ({ getFav, ...myPokemon }) => {
-    console.log(myPokemon)
   const numberSum = Math.round(Math.random() * 60)
   return (
     <div className="Pokemon__container">
-      {/* {getFav && ( */}
         <button onClick={() => getFav(myPokemon)} className="getFavourite">
           GET IT
         </button>
-      {/* )} */}
       <div className="Pokemon_name">
         <h2>{myPokemon.name}</h2>
         <div className="magic">

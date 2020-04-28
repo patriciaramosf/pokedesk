@@ -1,12 +1,9 @@
 import React from 'react';
-import logo from '../pokemon.png';
+import {Link } from 'react-router-dom';
 const Header = () => {
     return(
         <header className="Header">
-           <h1 className="title">- Pokedesk</h1>
-           <div className="containerPokemonLogo">
-                <img className="pokemonLogo" src={logo} alt="pokemon logo"/>
-            </div>
+           <Link to="/"><h1 className="title">Pokedesk</h1></Link>
         </header>
     )
 }
